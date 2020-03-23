@@ -1,0 +1,6 @@
+1、add a remote repository from git
+2、 download github desktop
+3、 clone repository from remote git 
+4、 git add "files"
+5、 git commit "commit message"
+6、 git push origin master (git will remaind login credentials)
