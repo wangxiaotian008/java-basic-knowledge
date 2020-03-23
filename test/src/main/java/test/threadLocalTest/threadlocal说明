@@ -1,0 +1,2 @@
+该包下使用threadlocal来实现多线程安全问题，对于一个每个线程都要用到的static成员变量需要使用threadlocal来修饰，这样
+所有的线程都是用的自己的static成员变量，互不影响
