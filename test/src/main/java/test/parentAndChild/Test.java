@@ -17,6 +17,8 @@ public class Test {
 		StringBuilder builder = new StringBuilder("1");
 		
 		builder.append("12345678901234567890");
+		
+		child.test();
 
 	}
 

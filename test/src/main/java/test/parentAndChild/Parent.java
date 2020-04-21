@@ -30,4 +30,8 @@ public class Parent {
 	public void setParentAge(int parentAge) {
 		this.parentAge = parentAge;
 	}
+	
+	public void test() {
+		System.out.println("parent test");
+	}
 }

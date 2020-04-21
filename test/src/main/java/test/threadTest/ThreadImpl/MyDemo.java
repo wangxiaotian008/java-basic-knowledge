@@ -1,15 +1,10 @@
-package test.lamdba;
+package test.threadTest.ThreadImpl;
 
-public class User {
+public class MyDemo {
+	
 	private int age;
 	
 	private String name;
-
-	public User(int age, String name) {
-		super();
-		this.age = age;
-		this.name = name;
-	}
 
 	public int getAge() {
 		return age;
@@ -29,8 +24,6 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [age=" + age + ", name=" + name + "]";
+		return "MyDemo [age=" + age + ", name=" + name + "]";
 	}
-	
-
 }

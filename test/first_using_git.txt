@@ -4,3 +4,5 @@
 4、 git add "files"
 5、 git commit "commit message"
 6、 git push origin master (git will remaind login credentials)
+
+// git提交忽略文件方法：在项目的根目录下添加.gitignore文件，并把相应的要忽略的文件添加到该文件即可。

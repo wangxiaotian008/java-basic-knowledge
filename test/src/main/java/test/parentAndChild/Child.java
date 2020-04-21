@@ -2,14 +2,15 @@ package test.parentAndChild;
 
 public class Child extends Parent{
 
-	
-
 	private String childName;
 	
 	private int childAge;
 	
+	public Child() {
+		
+	}
 	public Child(String parentName, int parentAge) {
-//		super(parentName, parentAge);
+		super(parentName, parentAge);
 	}
 
 	public String getChildName() {
@@ -27,5 +28,11 @@ public class Child extends Parent{
 	public void setChildAge(int childAge) {
 		this.childAge = childAge;
 	}
+	@Override
+	public void test() {
+		System.out.println("child test");
+	}
+	
+	
 
 }
