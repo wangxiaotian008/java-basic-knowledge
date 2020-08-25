@@ -5,6 +5,10 @@ import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.locks.LockSupport;
+
+import com.sun.org.apache.bcel.internal.generic.NEW;
 
 public class Test {
 
@@ -114,10 +118,45 @@ public class Test {
 //		System.getProperties().list(System.out);
 //		int temp = 9;
 //		System.out.println(new Test().test());
+		Object object = new Object();
+		CountDownLatch cdl = new CountDownLatch(1);
+		new Thread(()->{
+			
+			synchronized (object) {
+				//					object.wait();
+									try {
+										Thread.sleep(20000);
+									} catch (InterruptedException e) {
+										// TODO Auto-generated catch block
+										e.printStackTrace();
+									}
+									cdl.countDown();
+			}
+		},"waitThread").start();
+		
+		try {
+			cdl.await();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println("end");
 	}
 	public int test(){
 		int temp = 9;
 		return temp;
+	}
+	
+	public static Demo getDemo(Demo demo) {
+		try {
+			demo.setI(10);
+			return demo;
+		} catch (Exception e) {
+			// TODO: handle exception
+		}finally {
+			demo.setI(11);
+		}
+		return demo;
 	}
 
 }

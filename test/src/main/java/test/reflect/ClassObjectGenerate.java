@@ -1,6 +1,6 @@
 package test.reflect;
 
-import test.parentAndChild.Child;
+import test.basic.parentAndChild.Child;
 
 /**
  * 获取Class对象的方式三种
